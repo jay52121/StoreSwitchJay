@@ -5,6 +5,10 @@
 <h1 align="center">StoreSwitch</h1>
 
 <p align="center">
+  <strong>简体中文</strong> · <a href="README.en.md">English</a>
+</p>
+
+<p align="center">
   一个把多组 App Store 账号安全留在本机、需要时快速切换的原生 macOS 工具。<br>
   A native macOS utility for securely managing and switching App Store accounts.
 </p>
