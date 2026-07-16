@@ -1,0 +1,515 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		045032C2FF28431C43625F67 /* AccountStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4BD05D7B9533F5D3B2B2C3 /* AccountStoreTests.swift */; };
+		142D19E4D2FAA2E899185E48 /* AccountMetadataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453D0561DAE7D8D21603C83F /* AccountMetadataStorage.swift */; };
+		17344F1710E277CDC32B07EA /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDE4B77735F84FAFA510B2B /* RootView.swift */; };
+		27234E7C29C0E648129A51E4 /* AccountStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421FC864075C61DDED589BE8 /* AccountStore.swift */; };
+		31B10ADD7925D92CD32D30B6 /* AppleScriptTemplateRendererTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AD5D4FCF19D81F19682952 /* AppleScriptTemplateRendererTests.swift */; };
+		3651EFDE92E87D1B0F6BE4BD /* AppleScriptTemplateRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFD7C36604DF2F2A05A29CE /* AppleScriptTemplateRenderer.swift */; };
+		6936F51CF0F2485DD2FE15D0 /* SwitchAppStoreAccount.applescript in Resources */ = {isa = PBXBuildFile; fileRef = 30E2E3DBF5938FCFE06DE8A3 /* SwitchAppStoreAccount.applescript */; };
+		82034A5B12D2EEAFD83DB031 /* AppStoreAutomation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D87C6BB03F4AF49DB6183E5 /* AppStoreAutomation.swift */; };
+		9D3C3C5B2C0B67DE1085A61F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 820854034C653B09144E1576 /* Assets.xcassets */; };
+		DA87B2C1EB75B11FC9109D50 /* KeychainCredentialVault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8E71FD53D6F684C30FEA9E /* KeychainCredentialVault.swift */; };
+		DE43C8C2916FECB48F2CC272 /* AccountEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AF12CB4EEB0045403467E6 /* AccountEditorView.swift */; };
+		ED1789DCD52194573EA4B9A9 /* StoreSwitchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2C2503EA11DF1141EDB489 /* StoreSwitchApp.swift */; };
+		F686844DF74A810F1E25FF07 /* StoreAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EABE1F21C17430B5543256E /* StoreAccount.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		474EDA16E3922FB5290BB383 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B72BAC149DB97B8D262EF43C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B4E6A81EF42AF7E83555825;
+			remoteInfo = StoreSwitch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0DDE4B77735F84FAFA510B2B /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		2FC5AFD844CCB1D3320240B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		30E2E3DBF5938FCFE06DE8A3 /* SwitchAppStoreAccount.applescript */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.applescript; path = SwitchAppStoreAccount.applescript; sourceTree = "<group>"; };
+		421FC864075C61DDED589BE8 /* AccountStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountStore.swift; sourceTree = "<group>"; };
+		453D0561DAE7D8D21603C83F /* AccountMetadataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountMetadataStorage.swift; sourceTree = "<group>"; };
+		4B8E71FD53D6F684C30FEA9E /* KeychainCredentialVault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainCredentialVault.swift; sourceTree = "<group>"; };
+		4D87C6BB03F4AF49DB6183E5 /* AppStoreAutomation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreAutomation.swift; sourceTree = "<group>"; };
+		4E2C2503EA11DF1141EDB489 /* StoreSwitchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreSwitchApp.swift; sourceTree = "<group>"; };
+		77AD5D4FCF19D81F19682952 /* AppleScriptTemplateRendererTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleScriptTemplateRendererTests.swift; sourceTree = "<group>"; };
+		820854034C653B09144E1576 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9EABE1F21C17430B5543256E /* StoreAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreAccount.swift; sourceTree = "<group>"; };
+		9FF6C575A8950806CF463E3D /* StoreSwitch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreSwitch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAFD7C36604DF2F2A05A29CE /* AppleScriptTemplateRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleScriptTemplateRenderer.swift; sourceTree = "<group>"; };
+		BAB4E9DA19A8EADA0D8C87BA /* StoreSwitchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoreSwitchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5AF12CB4EEB0045403467E6 /* AccountEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountEditorView.swift; sourceTree = "<group>"; };
+		EA4BD05D7B9533F5D3B2B2C3 /* AccountStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountStoreTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		02E4802AD81C82C5AE2F2814 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9FF6C575A8950806CF463E3D /* StoreSwitch.app */,
+				BAB4E9DA19A8EADA0D8C87BA /* StoreSwitchTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		11EDD213349DEFCD5B88D20D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9EABE1F21C17430B5543256E /* StoreAccount.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		12B9DDDC50CEA5A52D7A9FBA /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				85AE6D6296CA00E1F9F6FFF7 /* App */,
+				B5B1AA85F2CBD2FB13457C7D /* Automation */,
+				11EDD213349DEFCD5B88D20D /* Models */,
+				34994B39E4EF95C0CF421225 /* State */,
+				17FD1F3AE97293BAB1F3735F /* Storage */,
+				D5557E68C4DBF9A0AF8755FF /* Views */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		17FD1F3AE97293BAB1F3735F /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				453D0561DAE7D8D21603C83F /* AccountMetadataStorage.swift */,
+				4B8E71FD53D6F684C30FEA9E /* KeychainCredentialVault.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		34994B39E4EF95C0CF421225 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				421FC864075C61DDED589BE8 /* AccountStore.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		85AE6D6296CA00E1F9F6FFF7 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2FC5AFD844CCB1D3320240B8 /* Info.plist */,
+				4E2C2503EA11DF1141EDB489 /* StoreSwitchApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		89C5C8646A87CBD109CB4C9B /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				EA4BD05D7B9533F5D3B2B2C3 /* AccountStoreTests.swift */,
+				77AD5D4FCF19D81F19682952 /* AppleScriptTemplateRendererTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		B5B1AA85F2CBD2FB13457C7D /* Automation */ = {
+			isa = PBXGroup;
+			children = (
+				AAFD7C36604DF2F2A05A29CE /* AppleScriptTemplateRenderer.swift */,
+				4D87C6BB03F4AF49DB6183E5 /* AppStoreAutomation.swift */,
+			);
+			path = Automation;
+			sourceTree = "<group>";
+		};
+		BAD05FE6EAF7D47C97832DE4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				820854034C653B09144E1576 /* Assets.xcassets */,
+				30E2E3DBF5938FCFE06DE8A3 /* SwitchAppStoreAccount.applescript */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D5557E68C4DBF9A0AF8755FF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E5AF12CB4EEB0045403467E6 /* AccountEditorView.swift */,
+				0DDE4B77735F84FAFA510B2B /* RootView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FD3B9F7AB6817E85CD47B433 = {
+			isa = PBXGroup;
+			children = (
+				BAD05FE6EAF7D47C97832DE4 /* Resources */,
+				12B9DDDC50CEA5A52D7A9FBA /* Sources */,
+				89C5C8646A87CBD109CB4C9B /* Tests */,
+				02E4802AD81C82C5AE2F2814 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3B4E6A81EF42AF7E83555825 /* StoreSwitch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 988E9194B2D104D7BE6CA979 /* Build configuration list for PBXNativeTarget "StoreSwitch" */;
+			buildPhases = (
+				E061D8966C7A339621D17498 /* Sources */,
+				57E0D24BE8646269FCEC688F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StoreSwitch;
+			packageProductDependencies = (
+			);
+			productName = StoreSwitch;
+			productReference = 9FF6C575A8950806CF463E3D /* StoreSwitch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		91FF968770BA34E1011776AC /* StoreSwitchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC0B58674665A7FB0B88F66A /* Build configuration list for PBXNativeTarget "StoreSwitchTests" */;
+			buildPhases = (
+				9334C9A6DC72FF25530CBD69 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8B9EBF929A6AE98D5551A606 /* PBXTargetDependency */,
+			);
+			name = StoreSwitchTests;
+			packageProductDependencies = (
+			);
+			productName = StoreSwitchTests;
+			productReference = BAB4E9DA19A8EADA0D8C87BA /* StoreSwitchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B72BAC149DB97B8D262EF43C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					3B4E6A81EF42AF7E83555825 = {
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 8DA8194192B62B076E6EDEF9 /* Build configuration list for PBXProject "StoreSwitch" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = FD3B9F7AB6817E85CD47B433;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 02E4802AD81C82C5AE2F2814 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3B4E6A81EF42AF7E83555825 /* StoreSwitch */,
+				91FF968770BA34E1011776AC /* StoreSwitchTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		57E0D24BE8646269FCEC688F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D3C3C5B2C0B67DE1085A61F /* Assets.xcassets in Resources */,
+				6936F51CF0F2485DD2FE15D0 /* SwitchAppStoreAccount.applescript in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9334C9A6DC72FF25530CBD69 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				045032C2FF28431C43625F67 /* AccountStoreTests.swift in Sources */,
+				31B10ADD7925D92CD32D30B6 /* AppleScriptTemplateRendererTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E061D8966C7A339621D17498 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE43C8C2916FECB48F2CC272 /* AccountEditorView.swift in Sources */,
+				142D19E4D2FAA2E899185E48 /* AccountMetadataStorage.swift in Sources */,
+				27234E7C29C0E648129A51E4 /* AccountStore.swift in Sources */,
+				82034A5B12D2EEAFD83DB031 /* AppStoreAutomation.swift in Sources */,
+				3651EFDE92E87D1B0F6BE4BD /* AppleScriptTemplateRenderer.swift in Sources */,
+				DA87B2C1EB75B11FC9109D50 /* KeychainCredentialVault.swift in Sources */,
+				17344F1710E277CDC32B07EA /* RootView.swift in Sources */,
+				F686844DF74A810F1E25FF07 /* StoreAccount.swift in Sources */,
+				ED1789DCD52194573EA4B9A9 /* StoreSwitchApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8B9EBF929A6AE98D5551A606 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3B4E6A81EF42AF7E83555825 /* StoreSwitch */;
+			targetProxy = 474EDA16E3922FB5290BB383 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0400EBFBA87F41336B2CA9D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 2;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 0.2.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		45AA472D87195A3FEEFCF2CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Sources/App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jplinx.storeswitch;
+				PRODUCT_NAME = StoreSwitch;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		5681DF8DE942AA85BBC1AB37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Sources/App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jplinx.storeswitch;
+				PRODUCT_NAME = StoreSwitch;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		697F2C679113B70BB1A3911E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jplinx.storeswitch.tests;
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StoreSwitch.app/Contents/MacOS/StoreSwitch";
+			};
+			name = Release;
+		};
+		8B10BFC044387F5E10D3D08B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jplinx.storeswitch.tests;
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StoreSwitch.app/Contents/MacOS/StoreSwitch";
+			};
+			name = Debug;
+		};
+		D7056B2E32ED30409E1D101F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 2;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 0.2.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8DA8194192B62B076E6EDEF9 /* Build configuration list for PBXProject "StoreSwitch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7056B2E32ED30409E1D101F /* Debug */,
+				0400EBFBA87F41336B2CA9D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		988E9194B2D104D7BE6CA979 /* Build configuration list for PBXNativeTarget "StoreSwitch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5681DF8DE942AA85BBC1AB37 /* Debug */,
+				45AA472D87195A3FEEFCF2CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		FC0B58674665A7FB0B88F66A /* Build configuration list for PBXNativeTarget "StoreSwitchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B10BFC044387F5E10D3D08B /* Debug */,
+				697F2C679113B70BB1A3911E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B72BAC149DB97B8D262EF43C /* Project object */;
+}

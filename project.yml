@@ -1,0 +1,65 @@
+name: StoreSwitch
+options:
+  bundleIdPrefix: com.jplinx
+  deploymentTarget:
+    macOS: "15.0"
+  createIntermediateGroups: true
+settings:
+  base:
+    MARKETING_VERSION: "0.2.0"
+    CURRENT_PROJECT_VERSION: "2"
+    SWIFT_VERSION: "5.0"
+    SWIFT_STRICT_CONCURRENCY: minimal
+    ENABLE_USER_SCRIPT_SANDBOXING: "NO"
+targets:
+  StoreSwitch:
+    type: application
+    platform: macOS
+    sources:
+      - path: Sources
+      - path: Resources
+        buildPhase: resources
+    info:
+      path: Sources/App/Info.plist
+      properties:
+        CFBundleDisplayName: StoreSwitch
+        CFBundleName: StoreSwitch
+        CFBundleShortVersionString: "0.2.0"
+        CFBundleVersion: "2"
+        LSApplicationCategoryType: public.app-category.utilities
+        LSMinimumSystemVersion: "15.0"
+        NSAppleEventsUsageDescription: StoreSwitch 需要控制“系统事件”和 App Store，以退出当前商店账号并填写所选账号。
+        NSHighResolutionCapable: true
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.jplinx.storeswitch
+        PRODUCT_NAME: StoreSwitch
+        GENERATE_INFOPLIST_FILE: "NO"
+        ENABLE_APP_SANDBOX: "NO"
+        ENABLE_HARDENED_RUNTIME: "NO"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        CODE_SIGN_STYLE: Manual
+        CODE_SIGN_IDENTITY: "-"
+  StoreSwitchTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources:
+      - path: Tests
+    dependencies:
+      - target: StoreSwitch
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.jplinx.storeswitch.tests
+        GENERATE_INFOPLIST_FILE: "YES"
+schemes:
+  StoreSwitch:
+    build:
+      targets:
+        StoreSwitch: all
+        StoreSwitchTests: [test]
+    test:
+      targets:
+        - StoreSwitchTests
+      gatherCoverageData: true
+    run:
+      config: Debug
