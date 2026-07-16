@@ -5,7 +5,7 @@
 <h1 align="center">StoreSwitch</h1>
 
 <p align="center">
-  <strong>简体中文</strong> · <a href="README.en.md">English</a>
+  <a href="README.md">English</a> · <strong>简体中文</strong>
 </p>
 
 <p align="center">
