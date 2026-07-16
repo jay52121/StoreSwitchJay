@@ -38,7 +38,11 @@ mkdir -p "$output_dir"
 archive="$output_dir/StoreSwitch-v${version}-macos.zip"
 /bin/rm -f "$archive"
 /usr/bin/ditto -c -k --sequesterRsrc --keepParent "$release_app" "$archive"
-/usr/bin/shasum -a 256 "$archive" > "$archive.sha256"
+(
+  cd "$output_dir"
+  archive_name="$(basename "$archive")"
+  /usr/bin/shasum -a 256 "$archive_name" > "$archive_name.sha256"
+)
 
 printf 'Created %s\n' "$archive"
 printf 'Created %s\n' "$archive.sha256"
