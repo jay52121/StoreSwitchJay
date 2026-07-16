@@ -1,0 +1,62 @@
+"account.add" = "新增账号";
+"account.add.title" = "新增 App Store 账号";
+"account.edit.title" = "编辑 App Store 账号";
+"account.list" = "App Store 账号";
+"account.none.title" = "还没有账号";
+"account.none.description" = "添加账号后，密码只会保存在 macOS 钥匙串。";
+"account.add.first" = "添加第一个账号";
+"account.select" = "选择一个账号";
+
+"common.edit" = "编辑";
+"common.delete" = "删除";
+"common.cancel" = "取消";
+"common.save" = "保存";
+"common.okay" = "好";
+
+"editor.keychain.description" = "Apple ID 与密码会加密保存在 macOS 钥匙串。";
+"editor.display.information" = "显示信息";
+"editor.display.name.placeholder" = "账号名称，例如：美区主账号";
+"editor.region.name.placeholder" = "地区名称，例如：美国";
+"editor.region.code.placeholder" = "地区代码，例如：US";
+"editor.credentials" = "登录凭据";
+"editor.password" = "密码";
+"editor.notes" = "备注";
+
+"delete.confirmation.title" = "确认删除账号？";
+"delete.confirmation.message" = "会同时删除“%@”保存在钥匙串里的 Apple ID 和密码，此操作无法撤销。";
+"switch.confirmation.title" = "切换 App Store 账号？";
+"switch.start" = "开始切换";
+"switch.confirmation.message" = "StoreSwitch 会退出当前 App Store 账号，并登录“%@”（%@）。如果出现双重认证或条款页面，需要你手动完成。";
+"account.read.failed.title" = "无法读取账号";
+"account.delete.failed.title" = "删除失败";
+"switch.completed.title" = "切换流程完成";
+"switch.completed.message" = "App Store 已提交“%@”的登录。如果左下角显示该账号，就已经成功。";
+"switch.manual.title" = "需要手动确认";
+"switch.manual.message" = "App Store 仍显示验证窗口，请完成双重认证、条款确认或安全验证。";
+"switch.failed.title" = "无法切换";
+"credential.recovery.message" = "旧版临时签名创建的钥匙串凭据已无法读取。请重新输入 Apple ID 和密码并保存一次；升级到稳定签名后，后续重装不会再丢失访问权限。";
+
+"detail.credentials.keychain" = "凭据保存在 macOS 钥匙串";
+"detail.notes.empty" = "没有备注";
+"detail.switch.explanation.title" = "切换时会发生什么";
+"detail.switch.step.open" = "打开 App Store 并退出当前商店账号";
+"detail.switch.step.fill" = "自动填写所选 Apple ID 与密码";
+"detail.switch.step.manual" = "双重认证或条款确认仍由你手动完成";
+"detail.switching" = "正在切换…";
+"detail.switch.to.account" = "切换到这个账号";
+
+"error.account.display_name.missing" = "请填写账号名称。";
+"error.account.region.missing" = "请填写地区名称。";
+"error.account.apple_id.missing" = "请填写 Apple ID。";
+"error.account.password.missing" = "请填写密码。";
+"error.keychain.not_found" = "没有找到这个账号的钥匙串凭据。";
+"error.keychain.invalid_data" = "钥匙串里的账号数据无法读取。";
+"error.keychain.operation_failed" = "钥匙串操作失败：%@（%d）";
+"error.unknown" = "未知错误";
+"error.automation.accessibility" = "需要辅助功能权限。请到“系统设置 → 隐私与安全性 → 辅助功能”允许 StoreSwitch，然后再试一次。";
+"error.automation.creation" = "无法创建 App Store 自动化脚本。";
+"error.automation.unknown_script" = "未知 AppleScript 错误";
+"error.automation.execution" = "切换失败：%@";
+"error.automation.resource_missing" = "没有找到 App Store 自动化脚本资源。";
+"error.automation.resource_unreadable" = "无法读取 App Store 自动化脚本资源。";
+"error.automation.template_invalid" = "App Store 自动化脚本模板不完整。";

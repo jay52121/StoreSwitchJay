@@ -46,13 +46,13 @@ struct RootView: View {
                 Button {
                     editorContext = EditorContext(account: nil, draft: AccountDraft())
                 } label: {
-                    Label("新增账号", systemImage: "plus")
+                    Label(L10n.addAccount, systemImage: "plus")
                 }
             }
         }
         .sheet(item: $editorContext) { context in
             AccountEditorView(
-                title: context.account == nil ? "新增 App Store 账号" : "编辑 App Store 账号",
+                title: context.account == nil ? L10n.addAccountTitle : L10n.editAccountTitle,
                 initialDraft: context.draft,
                 initialMessage: context.initialMessage,
                 onSave: { draft in
@@ -61,20 +61,20 @@ struct RootView: View {
                 }
             )
         }
-        .alert("确认删除账号？", isPresented: deleteAlertBinding, presenting: pendingDelete) { account in
-            Button("删除", role: .destructive) { delete(account) }
-            Button("取消", role: .cancel) { pendingDelete = nil }
+        .alert(L10n.deleteConfirmationTitle, isPresented: deleteAlertBinding, presenting: pendingDelete) { account in
+            Button(L10n.delete, role: .destructive) { delete(account) }
+            Button(L10n.cancel, role: .cancel) { pendingDelete = nil }
         } message: { account in
-            Text("会同时删除“\(account.displayName)”保存在钥匙串里的 Apple ID 和密码，此操作无法撤销。")
+            Text(L10n.deleteConfirmationMessage(accountName: account.displayName))
         }
-        .alert("切换 App Store 账号？", isPresented: switchAlertBinding, presenting: pendingSwitch) { account in
-            Button("开始切换") { switchAccount(account) }
-            Button("取消", role: .cancel) { pendingSwitch = nil }
+        .alert(L10n.switchConfirmationTitle, isPresented: switchAlertBinding, presenting: pendingSwitch) { account in
+            Button(L10n.startSwitching) { switchAccount(account) }
+            Button(L10n.cancel, role: .cancel) { pendingSwitch = nil }
         } message: { account in
-            Text("StoreSwitch 会退出当前 App Store 账号，并登录“\(account.displayName)”（\(account.regionName)）。如果出现双重认证或条款页面，需要你手动完成。")
+            Text(L10n.switchConfirmationMessage(accountName: account.displayName, regionName: account.regionName))
         }
         .alert(item: $notice) { notice in
-            Alert(title: Text(notice.title), message: Text(notice.message), dismissButton: .default(Text("好")))
+            Alert(title: Text(notice.title), message: Text(notice.message), dismissButton: .default(Text(L10n.okay)))
         }
         .onReceive(NotificationCenter.default.publisher(for: .createStoreAccount)) { _ in
             editorContext = EditorContext(account: nil, draft: AccountDraft())
@@ -90,13 +90,13 @@ struct RootView: View {
 
     private var sidebar: some View {
         List(selection: $selection) {
-            Section("App Store 账号") {
+            Section(L10n.accountList) {
                 ForEach(accountStore.accounts) { account in
                     AccountRow(account: account)
                         .tag(account.id)
                         .contextMenu {
-                            Button("编辑") { edit(account) }
-                            Button("删除", role: .destructive) { pendingDelete = account }
+                            Button(L10n.edit) { edit(account) }
+                            Button(L10n.delete, role: .destructive) { pendingDelete = account }
                         }
                 }
             }
@@ -104,11 +104,11 @@ struct RootView: View {
         .overlay {
             if accountStore.accounts.isEmpty {
                 ContentUnavailableView {
-                    Label("还没有账号", systemImage: "person.crop.circle.badge.plus")
+                    Label(L10n.noAccounts, systemImage: "person.crop.circle.badge.plus")
                 } description: {
-                    Text("添加账号后，密码只会保存在 macOS 钥匙串。")
+                    Text(L10n.noAccountsDescription)
                 } actions: {
-                    Button("添加第一个账号") {
+                    Button(L10n.addFirstAccount) {
                         editorContext = EditorContext(account: nil, draft: AccountDraft())
                     }
                     .buttonStyle(.borderedProminent)
@@ -128,7 +128,7 @@ struct RootView: View {
                 onDelete: { pendingDelete = account }
             )
         } else {
-            ContentUnavailableView("选择一个账号", systemImage: "person.crop.circle")
+            ContentUnavailableView(L10n.selectAccount, systemImage: "person.crop.circle")
         }
     }
 
@@ -155,7 +155,7 @@ struct RootView: View {
                vaultError.canRecoverByReplacingCredentials {
                 editorContext = recoveryEditorContext(for: account)
             } else {
-                notice = SwitchNotice(title: "无法读取账号", message: error.localizedDescription)
+                notice = SwitchNotice(title: L10n.unableToReadAccount, message: error.localizedDescription)
             }
         }
     }
@@ -165,7 +165,7 @@ struct RootView: View {
             try accountStore.delete(account)
             pendingDelete = nil
         } catch {
-            notice = SwitchNotice(title: "删除失败", message: error.localizedDescription)
+            notice = SwitchNotice(title: L10n.deleteFailed, message: error.localizedDescription)
         }
     }
 
@@ -179,7 +179,7 @@ struct RootView: View {
                vaultError.canRecoverByReplacingCredentials {
                 editorContext = recoveryEditorContext(for: account)
             } else {
-                notice = SwitchNotice(title: "无法读取账号", message: error.localizedDescription)
+                notice = SwitchNotice(title: L10n.unableToReadAccount, message: error.localizedDescription)
             }
             return
         }
@@ -194,17 +194,17 @@ struct RootView: View {
                 switch result {
                 case .completed:
                     notice = SwitchNotice(
-                        title: "切换流程完成",
-                        message: "App Store 已提交“\(account.displayName)”的登录。如果左下角显示该账号，就已经成功。"
+                        title: L10n.switchCompletedTitle,
+                        message: L10n.switchCompletedMessage(accountName: account.displayName)
                     )
                 case .needsAttention:
                     notice = SwitchNotice(
-                        title: "需要手动确认",
-                        message: "App Store 仍显示验证窗口，请完成双重认证、条款确认或安全验证。"
+                        title: L10n.manualConfirmationTitle,
+                        message: L10n.manualConfirmationMessage
                     )
                 }
             } catch {
-                notice = SwitchNotice(title: "无法切换", message: error.localizedDescription)
+                notice = SwitchNotice(title: L10n.unableToSwitch, message: error.localizedDescription)
             }
         }
     }
@@ -213,7 +213,7 @@ struct RootView: View {
         EditorContext(
             account: account,
             draft: AccountDraft(account: account),
-            initialMessage: "旧版临时签名创建的钥匙串凭据已无法读取。请重新输入 Apple ID 和密码并保存一次；升级到稳定签名后，后续重装不会再丢失访问权限。"
+            initialMessage: L10n.credentialRecoveryMessage
         )
     }
 }
@@ -269,24 +269,24 @@ private struct AccountDetailView: View {
                         Text(account.regionName)
                             .font(.title3)
                             .foregroundStyle(.secondary)
-                        Label("凭据保存在 macOS 钥匙串", systemImage: "lock.shield.fill")
+                        Label(L10n.credentialsInKeychain, systemImage: "lock.shield.fill")
                             .font(.callout)
                             .foregroundStyle(.green)
                     }
                 }
 
-                GroupBox("备注") {
-                    Text(account.note.isEmpty ? "没有备注" : account.note)
+                GroupBox(L10n.notes) {
+                    Text(account.note.isEmpty ? L10n.noNotes : account.note)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .foregroundStyle(account.note.isEmpty ? .secondary : .primary)
                         .padding(.vertical, 6)
                 }
 
-                GroupBox("切换时会发生什么") {
+                GroupBox(L10n.switchExplanationTitle) {
                     VStack(alignment: .leading, spacing: 10) {
-                        Label("打开 App Store 并退出当前商店账号", systemImage: "rectangle.portrait.and.arrow.right")
-                        Label("自动填写所选 Apple ID 与密码", systemImage: "keyboard")
-                        Label("双重认证或条款确认仍由你手动完成", systemImage: "checkmark.shield")
+                        Label(L10n.switchStepOpen, systemImage: "rectangle.portrait.and.arrow.right")
+                        Label(L10n.switchStepFill, systemImage: "keyboard")
+                        Label(L10n.switchStepManual, systemImage: "checkmark.shield")
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.vertical, 6)
@@ -297,21 +297,21 @@ private struct AccountDetailView: View {
                         if isSwitching {
                             ProgressView()
                                 .controlSize(.small)
-                            Text("正在切换…")
+                            Text(L10n.switching)
                         } else {
-                            Label("切换到这个账号", systemImage: "arrow.triangle.2.circlepath")
+                            Label(L10n.switchToAccount, systemImage: "arrow.triangle.2.circlepath")
                         }
                     }
                     .buttonStyle(.borderedProminent)
                     .controlSize(.large)
                     .disabled(isSwitching)
 
-                    Button("编辑", action: onEdit)
+                    Button(L10n.edit, action: onEdit)
                         .controlSize(.large)
 
                     Spacer()
 
-                    Button("删除", role: .destructive, action: onDelete)
+                    Button(L10n.delete, role: .destructive, action: onDelete)
                         .controlSize(.large)
                 }
             }

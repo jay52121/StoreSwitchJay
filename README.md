@@ -34,6 +34,7 @@ StoreSwitch **只切换 App Store 商店账号**，不会退出或修改 macOS �
 - 切换前二次确认，避免误退出当前商店账号
 - 自动打开 App Store、退出当前账号并填写目标账号
 - 双重认证、条款和安全验证交给用户手动确认
+- 界面、弹窗和权限说明自动跟随 macOS 语言，支持简体中文与英文；其他语言回退英文
 - 原生 SwiftUI 界面，Universal macOS 构建
 
 ## 安全与隐私
@@ -52,7 +53,7 @@ StoreSwitch 的设计目标是尽量缩小凭据暴露面：
 
 ### 下载 Release
 
-1. 前往 [Releases](https://github.com/jackljp/StoreSwitch/releases/latest) 下载 `StoreSwitch-v0.2.0-macos.zip`。
+1. 前往 [Releases](https://github.com/jackljp/StoreSwitch/releases/latest) 下载 `StoreSwitch-v0.2.1-macos.zip`。
 2. 解压后把 `StoreSwitch.app` 移到“应用程序”或 `~/Applications`。
 3. 首次启动如被 macOS 拦截，请在 Finder 中右键 App 选择“打开”。
 
@@ -88,6 +89,8 @@ bash scripts/install.sh
 
 如果从早期 ad-hoc 签名版本升级后遇到钥匙串 `-25293`，点击编辑或再次切换，重新输入一次 Apple ID 和密码并保存即可。StoreSwitch 0.2 已加入恢复流程。
 
+StoreSwitch 会读取 macOS 的首选语言：简体中文环境显示中文，英文环境显示英文，其他尚未翻译的语言使用英文。
+
 ## 构建与测试
 
 ```bash
@@ -117,9 +120,9 @@ App Store 大版本更新可能改变辅助功能层级。如果菜单或登录�
 
 ```text
 StoreSwitch/
-├── Resources/                  # App icon 与 AppleScript 资源
-├── Sources/                    # SwiftUI、Keychain、状态与自动化
-├── Tests/                      # 凭据隔离、恢复与模板测试
+├── Resources/                  # App icon、AppleScript 与本地化资源
+├── Sources/                    # SwiftUI、Keychain、状态、自动化与本地化
+├── Tests/                      # 凭据隔离、恢复、自动化与本地化测试
 ├── docs/assets/                # README 图标资源
 ├── scripts/install.sh          # 本机构建、稳定签名与安装
 ├── scripts/package-release.sh  # Release 打包

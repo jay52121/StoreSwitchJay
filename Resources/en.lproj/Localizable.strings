@@ -1,0 +1,62 @@
+"account.add" = "Add Account";
+"account.add.title" = "Add App Store Account";
+"account.edit.title" = "Edit App Store Account";
+"account.list" = "App Store Accounts";
+"account.none.title" = "No Accounts Yet";
+"account.none.description" = "After you add an account, its password is stored only in macOS Keychain.";
+"account.add.first" = "Add First Account";
+"account.select" = "Select an Account";
+
+"common.edit" = "Edit";
+"common.delete" = "Delete";
+"common.cancel" = "Cancel";
+"common.save" = "Save";
+"common.okay" = "OK";
+
+"editor.keychain.description" = "Your Apple ID and password are encrypted and stored in macOS Keychain.";
+"editor.display.information" = "Display Information";
+"editor.display.name.placeholder" = "Account name, e.g. US Main Account";
+"editor.region.name.placeholder" = "Region name, e.g. United States";
+"editor.region.code.placeholder" = "Region code, e.g. US";
+"editor.credentials" = "Sign-In Credentials";
+"editor.password" = "Password";
+"editor.notes" = "Notes";
+
+"delete.confirmation.title" = "Delete Account?";
+"delete.confirmation.message" = "This will also delete the Apple ID and password for “%@” from Keychain. This action cannot be undone.";
+"switch.confirmation.title" = "Switch App Store Account?";
+"switch.start" = "Start Switching";
+"switch.confirmation.message" = "StoreSwitch will sign out of the current App Store account and sign in to “%@” (%@). You will need to complete two-factor authentication or terms manually if prompted.";
+"account.read.failed.title" = "Unable to Read Account";
+"account.delete.failed.title" = "Delete Failed";
+"switch.completed.title" = "Switch Flow Completed";
+"switch.completed.message" = "App Store submitted the sign-in for “%@”. If that account appears in the lower-left corner, the switch succeeded.";
+"switch.manual.title" = "Manual Confirmation Required";
+"switch.manual.message" = "App Store is still showing a verification window. Complete two-factor authentication, terms, or security verification manually.";
+"switch.failed.title" = "Unable to Switch";
+"credential.recovery.message" = "Keychain credentials created by an older temporary signature can no longer be read. Enter the Apple ID and password again and save once. After upgrading to the stable signature, future reinstalls will retain access.";
+
+"detail.credentials.keychain" = "Credentials stored in macOS Keychain";
+"detail.notes.empty" = "No notes";
+"detail.switch.explanation.title" = "What Happens During a Switch";
+"detail.switch.step.open" = "Open App Store and sign out of the current store account";
+"detail.switch.step.fill" = "Automatically enter the selected Apple ID and password";
+"detail.switch.step.manual" = "Complete two-factor authentication or terms manually";
+"detail.switching" = "Switching…";
+"detail.switch.to.account" = "Switch to This Account";
+
+"error.account.display_name.missing" = "Enter an account name.";
+"error.account.region.missing" = "Enter a region name.";
+"error.account.apple_id.missing" = "Enter an Apple ID.";
+"error.account.password.missing" = "Enter a password.";
+"error.keychain.not_found" = "No Keychain credentials were found for this account.";
+"error.keychain.invalid_data" = "The account data in Keychain could not be read.";
+"error.keychain.operation_failed" = "Keychain operation failed: %@ (%d)";
+"error.unknown" = "Unknown error";
+"error.automation.accessibility" = "Accessibility permission is required. Open System Settings → Privacy & Security → Accessibility, allow StoreSwitch, and try again.";
+"error.automation.creation" = "Unable to create the App Store automation script.";
+"error.automation.unknown_script" = "Unknown AppleScript error";
+"error.automation.execution" = "Switch failed: %@";
+"error.automation.resource_missing" = "The App Store automation script resource is missing.";
+"error.automation.resource_unreadable" = "The App Store automation script resource could not be read.";
+"error.automation.template_invalid" = "The App Store automation script template is incomplete.";

@@ -15,11 +15,11 @@ enum AppStoreAutomationError: LocalizedError {
     var errorDescription: String? {
         switch self {
         case .accessibilityPermissionRequired:
-            return "需要辅助功能权限。请到“系统设置 → 隐私与安全性 → 辅助功能”允许 StoreSwitch，然后再试一次。"
+            return L10n.accessibilityPermissionRequired
         case .scriptCreationFailed:
-            return "无法创建 App Store 自动化脚本。"
+            return L10n.automationScriptCreationFailed
         case .executionFailed(let message):
-            return "切换失败：\(message)"
+            return L10n.automationExecutionFailed(message: message)
         }
     }
 }
@@ -58,7 +58,7 @@ final class AppStoreAutomation: AppStoreAutomating {
                 var errorInfo: NSDictionary?
                 let descriptor = script.executeAndReturnError(&errorInfo)
                 if let errorInfo {
-                    let message = errorInfo[NSAppleScript.errorMessage] as? String ?? "未知 AppleScript 错误"
+                    let message = errorInfo[NSAppleScript.errorMessage] as? String ?? L10n.unknownAppleScriptError
                     continuation.resume(throwing: AppStoreAutomationError.executionFailed(message))
                     return
                 }

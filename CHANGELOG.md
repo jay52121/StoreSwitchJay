@@ -2,6 +2,17 @@
 
 All notable changes to StoreSwitch are documented here.
 
+## [0.2.1] - 2026-07-17
+
+### Added
+
+- Complete English and Simplified Chinese localization for the interface, alerts, validation errors, automation errors and Apple Events permission text.
+- Automatic language selection from macOS preferences, with English as the fallback for unsupported languages.
+
+### Fixed
+
+- Detect the App Store password field by its locale-independent `AXSecureTextField` subrole instead of the localized accessibility description. This fixes false “password field did not appear” failures on Chinese macOS.
+
 ## [0.2.0] - 2026-07-16
 
 ### Added

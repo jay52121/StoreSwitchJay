@@ -7,18 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		039C5BA201FFE08422D322EC /* LocalizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8565A0CCAAF7BCE947AF9859 /* LocalizationTests.swift */; };
 		045032C2FF28431C43625F67 /* AccountStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4BD05D7B9533F5D3B2B2C3 /* AccountStoreTests.swift */; };
 		142D19E4D2FAA2E899185E48 /* AccountMetadataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453D0561DAE7D8D21603C83F /* AccountMetadataStorage.swift */; };
 		17344F1710E277CDC32B07EA /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDE4B77735F84FAFA510B2B /* RootView.swift */; };
+		1B6EFA98B820EAD80155FA1B /* Info 2.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA73AFA3A570710D46A06C13 /* Info 2.plist */; };
 		27234E7C29C0E648129A51E4 /* AccountStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421FC864075C61DDED589BE8 /* AccountStore.swift */; };
 		31B10ADD7925D92CD32D30B6 /* AppleScriptTemplateRendererTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AD5D4FCF19D81F19682952 /* AppleScriptTemplateRendererTests.swift */; };
 		3651EFDE92E87D1B0F6BE4BD /* AppleScriptTemplateRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFD7C36604DF2F2A05A29CE /* AppleScriptTemplateRenderer.swift */; };
+		56C5F60F3FF20281EA71CCB7 /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3326E0A20BE87C1AD1CFA9 /* L10n.swift */; };
 		6936F51CF0F2485DD2FE15D0 /* SwitchAppStoreAccount.applescript in Resources */ = {isa = PBXBuildFile; fileRef = 30E2E3DBF5938FCFE06DE8A3 /* SwitchAppStoreAccount.applescript */; };
 		82034A5B12D2EEAFD83DB031 /* AppStoreAutomation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D87C6BB03F4AF49DB6183E5 /* AppStoreAutomation.swift */; };
 		9D3C3C5B2C0B67DE1085A61F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 820854034C653B09144E1576 /* Assets.xcassets */; };
 		DA87B2C1EB75B11FC9109D50 /* KeychainCredentialVault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8E71FD53D6F684C30FEA9E /* KeychainCredentialVault.swift */; };
 		DE43C8C2916FECB48F2CC272 /* AccountEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AF12CB4EEB0045403467E6 /* AccountEditorView.swift */; };
+		ECB9607805629AC2398DA49C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E2EF5E5F922C82020FB4515F /* Localizable.strings */; };
 		ED1789DCD52194573EA4B9A9 /* StoreSwitchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2C2503EA11DF1141EDB489 /* StoreSwitchApp.swift */; };
+		EF5EA60442A15D54388D9BD2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 812BF18403E7218DC3A364A4 /* InfoPlist.strings */; };
 		F686844DF74A810F1E25FF07 /* StoreAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EABE1F21C17430B5543256E /* StoreAccount.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,18 +42,25 @@
 		2FC5AFD844CCB1D3320240B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		30E2E3DBF5938FCFE06DE8A3 /* SwitchAppStoreAccount.applescript */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.applescript; path = SwitchAppStoreAccount.applescript; sourceTree = "<group>"; };
 		421FC864075C61DDED589BE8 /* AccountStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountStore.swift; sourceTree = "<group>"; };
+		42E7E8A24DC1AA9A6174EC28 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		453D0561DAE7D8D21603C83F /* AccountMetadataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountMetadataStorage.swift; sourceTree = "<group>"; };
 		4B8E71FD53D6F684C30FEA9E /* KeychainCredentialVault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainCredentialVault.swift; sourceTree = "<group>"; };
+		4D5DAA73C26D2AF93BF25D9B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4D87C6BB03F4AF49DB6183E5 /* AppStoreAutomation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreAutomation.swift; sourceTree = "<group>"; };
 		4E2C2503EA11DF1141EDB489 /* StoreSwitchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreSwitchApp.swift; sourceTree = "<group>"; };
 		77AD5D4FCF19D81F19682952 /* AppleScriptTemplateRendererTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleScriptTemplateRendererTests.swift; sourceTree = "<group>"; };
 		820854034C653B09144E1576 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8565A0CCAAF7BCE947AF9859 /* LocalizationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationTests.swift; sourceTree = "<group>"; };
+		9D6F0F764DBC26FAA7DF9165 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		9EABE1F21C17430B5543256E /* StoreAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreAccount.swift; sourceTree = "<group>"; };
 		9FF6C575A8950806CF463E3D /* StoreSwitch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreSwitch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAFD7C36604DF2F2A05A29CE /* AppleScriptTemplateRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleScriptTemplateRenderer.swift; sourceTree = "<group>"; };
+		AD5A27F6F84EAD4C3A1BB2B5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BAB4E9DA19A8EADA0D8C87BA /* StoreSwitchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoreSwitchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5AF12CB4EEB0045403467E6 /* AccountEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountEditorView.swift; sourceTree = "<group>"; };
 		EA4BD05D7B9533F5D3B2B2C3 /* AccountStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountStoreTests.swift; sourceTree = "<group>"; };
+		EA73AFA3A570710D46A06C13 /* Info 2.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Info 2.plist"; sourceTree = "<group>"; };
+		EC3326E0A20BE87C1AD1CFA9 /* L10n.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L10n.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -74,6 +86,7 @@
 			children = (
 				85AE6D6296CA00E1F9F6FFF7 /* App */,
 				B5B1AA85F2CBD2FB13457C7D /* Automation */,
+				3A69D9AF5002452C262615A2 /* Localization */,
 				11EDD213349DEFCD5B88D20D /* Models */,
 				34994B39E4EF95C0CF421225 /* State */,
 				17FD1F3AE97293BAB1F3735F /* Storage */,
@@ -99,9 +112,18 @@
 			path = State;
 			sourceTree = "<group>";
 		};
+		3A69D9AF5002452C262615A2 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				EC3326E0A20BE87C1AD1CFA9 /* L10n.swift */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
 		85AE6D6296CA00E1F9F6FFF7 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				EA73AFA3A570710D46A06C13 /* Info 2.plist */,
 				2FC5AFD844CCB1D3320240B8 /* Info.plist */,
 				4E2C2503EA11DF1141EDB489 /* StoreSwitchApp.swift */,
 			);
@@ -113,6 +135,7 @@
 			children = (
 				EA4BD05D7B9533F5D3B2B2C3 /* AccountStoreTests.swift */,
 				77AD5D4FCF19D81F19682952 /* AppleScriptTemplateRendererTests.swift */,
+				8565A0CCAAF7BCE947AF9859 /* LocalizationTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -131,6 +154,8 @@
 			children = (
 				820854034C653B09144E1576 /* Assets.xcassets */,
 				30E2E3DBF5938FCFE06DE8A3 /* SwitchAppStoreAccount.applescript */,
+				812BF18403E7218DC3A364A4 /* InfoPlist.strings */,
+				E2EF5E5F922C82020FB4515F /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -213,6 +238,7 @@
 			knownRegions = (
 				Base,
 				en,
+				"zh-Hans",
 			);
 			mainGroup = FD3B9F7AB6817E85CD47B433;
 			minimizedProjectReferenceProxies = 1;
@@ -233,6 +259,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D3C3C5B2C0B67DE1085A61F /* Assets.xcassets in Resources */,
+				1B6EFA98B820EAD80155FA1B /* Info 2.plist in Resources */,
+				EF5EA60442A15D54388D9BD2 /* InfoPlist.strings in Resources */,
+				ECB9607805629AC2398DA49C /* Localizable.strings in Resources */,
 				6936F51CF0F2485DD2FE15D0 /* SwitchAppStoreAccount.applescript in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -246,6 +275,7 @@
 			files = (
 				045032C2FF28431C43625F67 /* AccountStoreTests.swift in Sources */,
 				31B10ADD7925D92CD32D30B6 /* AppleScriptTemplateRendererTests.swift in Sources */,
+				039C5BA201FFE08422D322EC /* LocalizationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +289,7 @@
 				82034A5B12D2EEAFD83DB031 /* AppStoreAutomation.swift in Sources */,
 				3651EFDE92E87D1B0F6BE4BD /* AppleScriptTemplateRenderer.swift in Sources */,
 				DA87B2C1EB75B11FC9109D50 /* KeychainCredentialVault.swift in Sources */,
+				56C5F60F3FF20281EA71CCB7 /* L10n.swift in Sources */,
 				17344F1710E277CDC32B07EA /* RootView.swift in Sources */,
 				F686844DF74A810F1E25FF07 /* StoreAccount.swift in Sources */,
 				ED1789DCD52194573EA4B9A9 /* StoreSwitchApp.swift in Sources */,
@@ -274,6 +305,27 @@
 			targetProxy = 474EDA16E3922FB5290BB383 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		812BF18403E7218DC3A364A4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD5A27F6F84EAD4C3A1BB2B5 /* en */,
+				42E7E8A24DC1AA9A6174EC28 /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E2EF5E5F922C82020FB4515F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D5DAA73C26D2AF93BF25D9B /* en */,
+				9D6F0F764DBC26FAA7DF9165 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		0400EBFBA87F41336B2CA9D8 /* Release */ = {
@@ -310,7 +362,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -324,7 +376,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
-				MARKETING_VERSION = 0.2.0;
+				MARKETING_VERSION = 0.2.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -446,7 +498,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -466,7 +518,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
-				MARKETING_VERSION = 0.2.0;
+				MARKETING_VERSION = 0.2.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;

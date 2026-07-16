@@ -26,7 +26,7 @@ struct AccountEditorView: View {
                 VStack(alignment: .leading, spacing: 4) {
                     Text(title)
                         .font(.title2.bold())
-                    Text("Apple ID 与密码会加密保存在 macOS 钥匙串。")
+                    Text(L10n.keychainEditorDescription)
                         .foregroundStyle(.secondary)
                 }
                 Spacer()
@@ -39,20 +39,20 @@ struct AccountEditorView: View {
             Divider()
 
             Form {
-                Section("显示信息") {
-                    TextField("账号名称，例如：美区主账号", text: $draft.displayName)
-                    TextField("地区名称，例如：美国", text: $draft.regionName)
-                    TextField("地区代码，例如：US", text: $draft.regionCode)
+                Section(L10n.displayInformation) {
+                    TextField(L10n.displayNamePlaceholder, text: $draft.displayName)
+                    TextField(L10n.regionNamePlaceholder, text: $draft.regionName)
+                    TextField(L10n.regionCodePlaceholder, text: $draft.regionCode)
                 }
 
-                Section("登录凭据") {
+                Section(L10n.signInCredentials) {
                     TextField("Apple ID", text: $draft.appleID)
                         .textContentType(.username)
-                    SecureField("密码", text: $draft.password)
+                    SecureField(L10n.password, text: $draft.password)
                         .textContentType(.password)
                 }
 
-                Section("备注") {
+                Section(L10n.notes) {
                     TextEditor(text: $draft.note)
                         .frame(minHeight: 80)
                 }
@@ -70,9 +70,9 @@ struct AccountEditorView: View {
 
             HStack {
                 Spacer()
-                Button("取消") { dismiss() }
+                Button(L10n.cancel) { dismiss() }
                     .keyboardShortcut(.cancelAction)
-                Button("保存") { save() }
+                Button(L10n.save) { save() }
                     .buttonStyle(.borderedProminent)
                     .keyboardShortcut(.defaultAction)
             }

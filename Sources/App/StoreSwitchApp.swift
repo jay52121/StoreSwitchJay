@@ -13,7 +13,7 @@ struct StoreSwitchApp: App {
         .windowToolbarStyle(.unified)
         .commands {
             CommandGroup(replacing: .newItem) {
-                Button("新增账号") {
+                Button(L10n.addAccount) {
                     NotificationCenter.default.post(name: .createStoreAccount, object: nil)
                 }
                 .keyboardShortcut("n", modifiers: .command)

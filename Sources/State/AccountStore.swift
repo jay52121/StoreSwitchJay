@@ -8,10 +8,10 @@ enum AccountStoreError: LocalizedError {
 
     var errorDescription: String? {
         switch self {
-        case .missingDisplayName: return "请填写账号名称。"
-        case .missingRegion: return "请填写地区名称。"
-        case .missingAppleID: return "请填写 Apple ID。"
-        case .missingPassword: return "请填写密码。"
+        case .missingDisplayName: return L10n.missingDisplayName
+        case .missingRegion: return L10n.missingRegion
+        case .missingAppleID: return L10n.missingAppleID
+        case .missingPassword: return L10n.missingPassword
         }
     }
 }

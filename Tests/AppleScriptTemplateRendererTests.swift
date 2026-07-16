@@ -9,6 +9,9 @@ final class AppleScriptTemplateRendererTests: XCTestCase {
         )
         XCTAssertTrue(source.contains("test@example.com"))
         XCTAssertTrue(source.contains("test-password"))
+        XCTAssertTrue(source.contains("AXSecureTextField"))
+        XCTAssertTrue(source.contains("AppleLanguages"))
+        XCTAssertTrue(source.contains("The App Store password field was not detected."))
     }
 
     func testRenderEscapesCredentialsAndRemovesPlaceholders() throws {

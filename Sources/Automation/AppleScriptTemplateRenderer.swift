@@ -7,9 +7,9 @@ enum AppleScriptTemplateError: LocalizedError {
 
     var errorDescription: String? {
         switch self {
-        case .resourceMissing: return "没有找到 App Store 自动化脚本资源。"
-        case .unreadableResource: return "无法读取 App Store 自动化脚本资源。"
-        case .invalidTemplate: return "App Store 自动化脚本模板不完整。"
+        case .resourceMissing: return L10n.automationResourceMissing
+        case .unreadableResource: return L10n.automationResourceUnreadable
+        case .invalidTemplate: return L10n.automationTemplateInvalid
         }
     }
 }

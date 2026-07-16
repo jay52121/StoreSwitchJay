@@ -2,22 +2,36 @@
 property targetEmail : "__STORE_SWITCH_APPLE_ID__"
 property targetPassword : "__STORE_SWITCH_PASSWORD__"
 
-on localeMenuNames()
+on localeIsChinese()
 	set lang to ""
 	try
-		set lang to do shell script "defaults read -g AppleLocale 2>/dev/null"
+		set lang to do shell script "defaults read -g AppleLanguages 2>/dev/null | sed -n '2{s/[\" ,]//g;p;}'"
 	end try
+	if lang is "" then
+		try
+			set lang to do shell script "defaults read -g AppleLocale 2>/dev/null"
+		end try
+	end if
 	if lang is "" then
 		try
 			set lang to user locale of (system info)
 		end try
 	end if
-	if lang starts with "zh" then
+	return lang starts with "zh"
+end localeIsChinese
+
+on localeMenuNames()
+	if my localeIsChinese() then
 		return {"商店", "登录", "退出登录"}
 	else
 		return {"Store", "Sign In", "Sign Out"}
 	end if
 end localeMenuNames
+
+on localizedText(chineseText, englishText)
+	if my localeIsChinese() then return chineseText
+	return englishText
+end localizedText
 
 on ensureFront()
 	tell application "App Store" to activate
@@ -46,7 +60,18 @@ on probeSheet()
 			set i to 0
 			repeat with tf in text fields of cont
 				set i to i + 1
-				if (description of tf as text) is "secure text field" then
+				-- AXSubrole is stable across locales. The description is localized
+				-- (for example, Chinese App Store reports “安全文本栏”).
+				set isSecureField to false
+				try
+					if (subrole of tf as text) is "AXSecureTextField" then set isSecureField to true
+				end try
+				if not isSecureField then
+					try
+						if (description of tf as text) is "secure text field" then set isSecureField to true
+					end try
+				end if
+				if isSecureField then
 					set secIdx to i
 				else
 					set idIdx to i
@@ -110,7 +135,7 @@ on run
 				exit repeat
 			end if
 		end repeat
-		if storeMenu is missing value then error "找不到 App Store 的“" & storeName & "”菜单。"
+		if storeMenu is missing value then error (my localizedText("找不到 App Store 的“" & storeName & "”菜单。", "Could not find the App Store “" & storeName & "” menu."))
 
 		click storeMenu
 		delay 0.5
@@ -141,7 +166,7 @@ on run
 		end repeat
 		if not clickedSignIn then
 			key code 53
-			error "找不到 App Store 的登录菜单项。"
+			error (my localizedText("找不到 App Store 的登录菜单项。", "Could not find the App Store sign-in menu item."))
 		end if
 	end tell
 
@@ -151,7 +176,7 @@ on run
 		set probe to my probeSheet()
 		if item 1 of probe then exit repeat
 	end repeat
-	if not (item 1 of probe) then error "App Store 登录窗口没有出现。"
+	if not (item 1 of probe) then error (my localizedText("App Store 登录窗口没有出现。", "The App Store sign-in window did not appear."))
 	delay 0.8
 	set probe to my probeSheet()
 
@@ -166,7 +191,7 @@ on run
 				set probe to my probeSheet()
 				if (item 1 of probe) and (item 4 of probe) > 0 then exit repeat
 			end repeat
-			if not ((item 1 of probe) and (item 4 of probe) > 0) then error "提交 Apple ID 后没有出现密码框。"
+			if not ((item 1 of probe) and (item 4 of probe) > 0) then error (my localizedText("提交 Apple ID 后没有识别到密码框。", "The password field was not detected after submitting the Apple ID."))
 		else
 			my typeInField(useInner, idIdx, targetEmail, true, false)
 			set probe to my probeSheet()
@@ -175,7 +200,7 @@ on run
 
 	set useInner to item 2 of probe
 	set secIdx to item 4 of probe
-	if secIdx is 0 then error "没有找到 App Store 密码框。"
+	if secIdx is 0 then error (my localizedText("没有识别到 App Store 密码框。", "The App Store password field was not detected."))
 	my typeInField(useInner, secIdx, targetPassword, false, true)
 
 	repeat 40 times

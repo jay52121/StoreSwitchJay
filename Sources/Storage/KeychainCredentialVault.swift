@@ -15,12 +15,12 @@ enum CredentialVaultError: LocalizedError {
     var errorDescription: String? {
         switch self {
         case .notFound:
-            return "没有找到这个账号的钥匙串凭据。"
+            return L10n.keychainNotFound
         case .invalidData:
-            return "钥匙串里的账号数据无法读取。"
+            return L10n.keychainInvalidData
         case .keychain(let status):
-            let detail = SecCopyErrorMessageString(status, nil) as String? ?? "未知错误"
-            return "钥匙串操作失败：\(detail)（\(status)）"
+            let detail = SecCopyErrorMessageString(status, nil) as String? ?? L10n.unknownError
+            return L10n.keychainOperationFailed(detail: detail, status: status)
         }
     }
 

@@ -33,6 +33,7 @@ StoreSwitch **only changes the account used by the App Store**. It does not sign
 - Confirm before switching to prevent accidental sign-outs
 - Open the App Store, sign out, and fill in the selected account automatically
 - Hand two-factor authentication, terms, and security checks back to the user
+- Follow the macOS language automatically for the interface, alerts, and permission text; support English and Simplified Chinese, with English as the fallback
 - Native SwiftUI interface with a Universal macOS build
 
 ## Security and privacy
@@ -51,7 +52,7 @@ The source is available for inspection. See [SECURITY.md](SECURITY.md) for secur
 
 ### Download a release
 
-1. Open [Releases](https://github.com/jackljp/StoreSwitch/releases/latest) and download `StoreSwitch-v0.2.0-macos.zip`.
+1. Open [Releases](https://github.com/jackljp/StoreSwitch/releases/latest) and download `StoreSwitch-v0.2.1-macos.zip`.
 2. Extract the archive and move `StoreSwitch.app` to `/Applications` or `~/Applications`.
 3. If macOS blocks the first launch, right-click the app in Finder and choose **Open**.
 
@@ -78,14 +79,16 @@ The installer prefers a valid local Apple Development signing identity. You can 
 
 ## Usage
 
-1. Open StoreSwitch and click **新增账号** (Add Account).
+1. Open StoreSwitch and click **Add Account**.
 2. Enter a display name, region, Apple ID, password, and optional notes.
-3. Select an account and click **切换到这个账号** (Switch to This Account).
+3. Select an account and click **Switch to This Account**.
 4. On the first switch, allow StoreSwitch under **System Settings → Privacy & Security → Accessibility**.
 5. Allow control of System Events or the App Store if macOS asks.
 6. Complete any two-factor authentication, terms, or security checks in the App Store window.
 
 If you upgraded from an early ad-hoc build and see Keychain error `-25293`, edit or switch the account again, re-enter the Apple ID and password once, and save. StoreSwitch 0.2 includes a recovery flow for this case.
+
+StoreSwitch reads the preferred macOS language: Simplified Chinese systems display Chinese, English systems display English, and untranslated languages fall back to English.
 
 ## Build and test
 
@@ -116,9 +119,9 @@ Major App Store updates may change the accessibility hierarchy. If a menu or sig
 
 ```text
 StoreSwitch/
-├── Resources/                  # App icon and AppleScript resource
-├── Sources/                    # SwiftUI, Keychain, state, and automation
-├── Tests/                      # Credential isolation, recovery, and templates
+├── Resources/                  # App icon, AppleScript, and localization resources
+├── Sources/                    # SwiftUI, Keychain, state, automation, and localization
+├── Tests/                      # Credential isolation, recovery, automation, and localization
 ├── docs/assets/                # README icon assets
 ├── scripts/install.sh          # Local build, stable signing, and installation
 ├── scripts/package-release.sh  # Release packaging
