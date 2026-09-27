@@ -42,6 +42,27 @@ on ensureFront()
 	end tell
 end ensureFront
 
+on waitForStoreMenuName()
+	set storeMenuCandidates to {"商店", "Store"}
+	repeat 30 times
+		my ensureFront()
+		tell application "System Events" to tell process "App Store"
+			try
+				if (count of menu bars) > 0 then
+					repeat with menuBarItem in menu bar items of menu bar 1
+						try
+							set itemName to name of menuBarItem as text
+							if storeMenuCandidates contains itemName then return itemName
+						end try
+					end repeat
+				end if
+			end try
+		end tell
+		delay 0.5
+	end repeat
+	return ""
+end waitForStoreMenuName
+
 on probeSheet()
 	tell application "System Events" to tell process "App Store"
 		try
@@ -120,23 +141,20 @@ on run
 	set signOutCandidates to {signOutName, signOutName & "…", signOutName & "..."}
 
 	my ensureFront()
-	delay 1.5
+	delay 0.5
 	tell application "System Events" to tell process "App Store"
 		repeat 3 times
 			if (count of sheets of window 1) is 0 then exit repeat
 			key code 53
 			delay 0.5
 		end repeat
+	end tell
 
-		set storeMenu to missing value
-		repeat with menuBarItem in menu bar items of menu bar 1
-			if (name of menuBarItem) is storeName then
-				set storeMenu to menuBarItem
-				exit repeat
-			end if
-		end repeat
-		if storeMenu is missing value then error (my localizedText("找不到 App Store 的“" & storeName & "”菜单。", "Could not find the App Store “" & storeName & "” menu."))
+	set storeMenuName to my waitForStoreMenuName()
+	if storeMenuName is "" then error (my localizedText("等待 App Store 菜单就绪超时；找不到“商店”或“Store”菜单。", "Timed out waiting for the App Store menu; could not find “Store” or “商店”."))
 
+	tell application "System Events" to tell process "App Store"
+		set storeMenu to menu bar item storeMenuName of menu bar 1
 		click storeMenu
 		delay 0.5
 		set didSignOut to false
@@ -154,6 +172,7 @@ on run
 		end if
 
 		delay 0.5
+		set storeMenu to menu bar item storeMenuName of menu bar 1
 		click storeMenu
 		delay 0.5
 		set clickedSignIn to false
