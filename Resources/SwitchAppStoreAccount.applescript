@@ -133,12 +133,11 @@ on run
 	tell application "App Store" to activate
 	delay 1.5
 
-	set menuNames to my localeMenuNames()
-	set storeName to item 1 of menuNames
-	set signInName to item 2 of menuNames
-	set signOutName to item 3 of menuNames
-	set signInCandidates to {signInName, signInName & "…", signInName & "..."}
-	set signOutCandidates to {signOutName, signOutName & "…", signOutName & "..."}
+	-- App Store can expose a mixed-language menu bar (for example:
+	-- Chinese system UI with the account menu named "Store"). Do not derive
+	-- automation menu names from the global macOS language.
+	set signInCandidates to {"登录", "登录…", "登录...", "Sign In", "Sign In…", "Sign In..."}
+	set signOutCandidates to {"退出登录", "退出登录…", "退出登录...", "Sign Out", "Sign Out…", "Sign Out..."}
 
 	my ensureFront()
 	delay 0.5
