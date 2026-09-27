@@ -115,6 +115,7 @@ struct RootView: View {
                 }
             }
         }
+        .navigationTitle("StoreSwitch (jay)")
     }
 
     @ViewBuilder
@@ -129,6 +130,7 @@ struct RootView: View {
             )
         } else {
             ContentUnavailableView(L10n.selectAccount, systemImage: "person.crop.circle")
+                .navigationTitle("StoreSwitch (jay)")
         }
     }
 
@@ -318,6 +320,6 @@ private struct AccountDetailView: View {
             .padding(32)
             .frame(maxWidth: 760, alignment: .leading)
         }
-        .navigationTitle(account.displayName)
+        .navigationTitle("\(account.displayName) — StoreSwitch (jay)")
     }
 }

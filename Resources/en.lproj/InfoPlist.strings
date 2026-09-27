@@ -1,1 +1,3 @@
+"CFBundleDisplayName" = "StoreSwitch (jay)";
+"CFBundleName" = "StoreSwitch (jay)";
 "NSAppleEventsUsageDescription" = "StoreSwitch needs to control System Events and App Store to sign out of the current store account and enter the selected account.";

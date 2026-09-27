@@ -1,1 +1,3 @@
+"CFBundleDisplayName" = "StoreSwitch (jay)";
+"CFBundleName" = "StoreSwitch (jay)";
 "NSAppleEventsUsageDescription" = "StoreSwitch 需要控制“系统事件”和 App Store，以退出当前商店账号并填写所选账号。";

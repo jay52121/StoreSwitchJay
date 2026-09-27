@@ -5,7 +5,7 @@ struct StoreSwitchApp: App {
     @StateObject private var accountStore = AccountStore.live()
 
     var body: some Scene {
-        WindowGroup {
+        WindowGroup("StoreSwitch (jay)") {
             RootView(accountStore: accountStore)
                 .frame(minWidth: 860, minHeight: 560)
         }
